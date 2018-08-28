@@ -7,7 +7,24 @@ constructor(props){
     characters:[],
     selectedCharacter: null
   };
+  this.handleCharacterSelected = this.handleCharacterSelected.bind(this);
 }
+componentDidMount(){
+  const url = 'http://hp-api.herokuapp.com/api/characters';
+  fetch(url)
+  .then((res) => {
+    return res.json();
+  })
+  .then((characters) => {
+    this.setState({characters: characters})
+  })
+}
+
+handleCharacterSelected(index) {
+  const selectedCharacter = this.state.characters[index];
+  this.setState({selectedCharacter: selectedCharacter})
+}
+
   render(){
     return(
       <div>
