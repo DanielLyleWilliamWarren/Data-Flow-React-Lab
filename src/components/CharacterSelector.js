@@ -2,7 +2,7 @@ import React from 'react';
 
 const CharacterSelector = (props) => {
   function handleChange(evt) {
-    props.onCharacterSelected(evt.target.detail);
+    props.onCharacterSelected(evt.target.value);
   }
 
   const options = props.characters.map((character, index) => {

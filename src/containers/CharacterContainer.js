@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import CharacterDetail from '../components/CharacterDetail'
-import CharacterSelector from '../components/CharacterSelector'
+import CharacterDetail from '../components/CharacterDetail';
+import CharacterSelector from '../components/CharacterSelector';
 
 class CharacterContainer extends Component{
 constructor(props){
