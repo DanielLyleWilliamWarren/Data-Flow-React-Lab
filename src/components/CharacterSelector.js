@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CharacterSelector = (props) => {
+  console.log(props);
   function handleChange(evt) {
     props.onCharacterSelected(evt.target.value);
   }
